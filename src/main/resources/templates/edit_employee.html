@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Employee</title>
+</head>
+<body>
+
+<div align="center">
+    <h1>Edit Employee</h1>
+
+    <form action="#" th:action="@{/save}" th:object="${newemployee}" method="post"  >
+        <table border="0" class="styled_table">
+
+            <tr>
+                <td>Id:</td>
+                <td><input class="form-control"  type="text" th:field="*{id}" readonly="readonly" /></td>
+            </tr>
+
+            <tr>
+                <td>Employee Name:</td>
+                <td><input class="form-control" type="text" th:field="*{name}" /></td>
+            </tr>
+
+            <tr>
+                <td>Age: </td>
+                <td><input class="form-control" type="text" th:field="*{age}" /></td>
+            </tr>
+
+            <tr>
+                <td>Address:</td>
+                <td><input class="form-control" type="text" th:field="*{address}" /></td>
+            </tr>
+
+            <tr>
+                <td>Designation:</td>
+                <td><input class="form-control" type="text" th:field="*{designation}" /></td>
+            </tr>
+
+            <tr>
+                <td>Salary:</td>
+                <td><input class="form-control" type="text" th:field="*{salary}" /></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+
+        </table>
+
+        <button class="btn  btn-success" type="submit">Save</button>
+
+
+    </form>
+
+
+
+</div>
+
+</body>
+
+<style>
+
+
+    table {
+        border-collapse: separate;
+        border-spacing:  0.5em;
+    }
+
+</style>
+
+</html>
